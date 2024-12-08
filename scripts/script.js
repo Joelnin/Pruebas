@@ -6,7 +6,7 @@ const animalsContainer = document.querySelector('#animals-container');
 async function getAnimalsSum() {
     try {
         // Load the animals.json file
-        // const response = await fetch('./data/animals.json');
+        const response = await fetch('./data/animals.json');
         const data = await response.json();
 
         // Loop through the animals and make API requests
