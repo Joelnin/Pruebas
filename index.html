@@ -3,12 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Animals</title>
+    <title>Species Globe</title>
     <meta name="description" content="">
     <meta name="author" content="Joelnin Rodriguez">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/styles.css">
 
     <link rel="icon" href="images/pen.ico" type="image/x-icon">
 
@@ -16,11 +18,18 @@
 </head>
 <body>
 
-    <h1>Animals</h1>
+    <form id="animal-form">
+        <label for="animals">Escribe nombres científicos (separados por comas):</label><br>
+        <input type="text" id="animals" placeholder="Ejemplo: Panthera onca, Canis lupus"><br>
+        <button type="submit">Mostrar en el Globo</button>
+    </form>
+    <div id="globe-container" style="width: 100%; height: 600px;"></div>
     
-    <div id="animals-container">
-        <p>Loading animals...</p>
-    </div>
+    
+    <div id="globe-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/globe.gl"></script>
     
     <footer>
         <p>
